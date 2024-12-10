@@ -59,11 +59,11 @@ import androidx.navigation.compose.rememberNavController
 
 //cores adicionais
 
-val azul_confort = Color(0xFF7BC4C4)
-val rose_confort = Color(0xFFFEDCC0)
-val azul_escuro = Color(0xFF37474F)
-val roxo_confort = Color(0xffA8639F)
-val marsala_confort = Color(0xffF457A3)
+val uranium_blue = Color(0xFFAEDFF7)
+val rose_confort = Color(0xff005377)
+val azul_escuro = Color(0xFFF5F5F5)
+val roxo_confort = Color(0xffA8D5BA)
+val indigo_dye = Color(0xff005377)
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -109,11 +109,7 @@ fun ConteudoSplash(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .paint(
-                painter = painterResource(R.drawable.tela_nuvens),
-                contentScale = ContentScale.Crop
-            )
-            .fillMaxSize(),
+            .background(indigo_dye),
 
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -126,11 +122,11 @@ fun ConteudoSplash(
                 .padding(bottom = 16.dp)
         )
         Text(
-            text = "TinyDreamer",
+            text = "Lullaby",
             fontSize = 40.sp,
             fontWeight = FontWeight.SemiBold,
-            color = azul_confort,
-            fontFamily = FontFamily.Cursive
+            color = uranium_blue,
+            fontFamily = FontFamily(Font(R.font.baloo))
         )
         Spacer(modifier = Modifier.padding(top = 70.dp))
 
@@ -141,8 +137,8 @@ fun ConteudoSplash(
                 }
             },
             colors = ButtonDefaults.buttonColors(
-                containerColor = rose_confort,
-                contentColor = azul_confort
+                containerColor = uranium_blue,
+                contentColor = indigo_dye
             ),
             modifier = Modifier.size(width = 230.dp, height = 38.dp)
         ) {
@@ -164,10 +160,7 @@ fun StoryApp(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .paint(
-                painter = painterResource(R.drawable.tela_nuvens),
-                contentScale = ContentScale.Crop
-            )
+            .background(uranium_blue)
     ) {
         Column(
             modifier = Modifier
@@ -190,12 +183,12 @@ fun StoryApp(
                 Spacer(modifier = Modifier.width(16.dp)) // Espaço entre a imagem e o texto
 
                 Text(
-                    text = "TinyDreamer",
+                    text = "Lullaby",
                     style = TextStyle(
                         fontSize = 30.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = azul_confort,
-                        fontFamily = FontFamily.Cursive
+                        color = indigo_dye,
+                        fontFamily = FontFamily(Font(R.font.baloo))
                     )
                 )
             }
@@ -255,7 +248,7 @@ fun StoryApp(
                 modifier = Modifier.padding(16.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = rose_confort,
-                    contentColor = azul_confort
+                    contentColor = uranium_blue
                 )
             ) {
                 Text(
@@ -278,10 +271,7 @@ fun Musicas_Opcoes(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .paint(
-                painter = painterResource(R.drawable.tela_nuvens),
-                contentScale = ContentScale.Crop
-            )
+            .background(indigo_dye)
     ) {
         Column(
             modifier = Modifier
@@ -303,12 +293,12 @@ fun Musicas_Opcoes(
                 Spacer(modifier = Modifier.width(16.dp))
 
                 Text(
-                    text = "TinyDreamer",
+                    text = "Lullaby",
                     style = TextStyle(
                         fontSize = 30.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = azul_confort,
-                        fontFamily = FontFamily.Cursive
+                        color =  uranium_blue,
+                        fontFamily = FontFamily(Font(R.font.baloo))
                     )
                 )
             }
@@ -351,7 +341,7 @@ fun Musicas_Opcoes(
                             },
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = roxo_confort,
-                                contentColor = azul_confort
+                                contentColor = indigo_dye
                             ),
                             modifier = Modifier
                                 .fillMaxWidth() // Botão ocupa a largura total do Card
@@ -374,7 +364,7 @@ fun Musicas_Opcoes(
                             },
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = roxo_confort,
-                                contentColor = azul_confort
+                                contentColor = indigo_dye
                             ),
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -395,7 +385,7 @@ fun Musicas_Opcoes(
                             } },
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = roxo_confort,
-                                contentColor = azul_confort
+                                contentColor = indigo_dye
                             ),
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -439,10 +429,7 @@ fun First_Music(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .paint(
-                painter = painterResource(R.drawable.tela_nuvens),
-                contentScale = ContentScale.Crop
-            )
+            .background(indigo_dye)
     ) {
         Column(
             modifier = Modifier
@@ -465,12 +452,12 @@ fun First_Music(
                 Spacer(modifier = Modifier.width(16.dp)) // Espaço entre a imagem e o texto
 
                 Text(
-                    text = "TinyDreamer",
+                    text = "Lullaby",
                     style = TextStyle(
                         fontSize = 30.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = azul_confort,
-                        fontFamily = FontFamily.Cursive
+                        color = uranium_blue,
+                        fontFamily = FontFamily(Font(R.font.baloo))
                     )
                 )
             }
@@ -503,12 +490,12 @@ fun First_Music(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "🌧️ Som de Chuva para Acalmar 🌧️",
+                            text = "🌧️O Som das gotas caindo🌧️",
                             style = TextStyle(
                                 fontSize = 21.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = marsala_confort,
-                                fontFamily = FontFamily.Cursive,
+                                color = uranium_blue,
+                                fontFamily = FontFamily(Font(R.font.baloo)),
                                 textAlign = TextAlign.Center
                             )
                         )
@@ -517,7 +504,7 @@ fun First_Music(
                             text = "Deixe o som suave da chuva ajudar seu bebê a relaxar e adormecer com tranquilidade.",
                             style = TextStyle(
                                 fontSize = 16.sp,
-                                color = Color.Black,
+                                color = uranium_blue,
                                 fontWeight = FontWeight.Normal,
                                 textAlign = TextAlign.Center
                             )
@@ -546,7 +533,7 @@ fun First_Music(
                         text = if (isPlaying) "🎵 Reproduzindo Som 🎵" else "⏸️ Som Pausado ⏸️",
                         fontSize = 24.sp,
                         fontWeight = FontWeight.Bold,
-                        color = azul_confort,
+                        color = uranium_blue,
                         textAlign = TextAlign.Center
                     )
 
@@ -633,10 +620,7 @@ fun Second_Music(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .paint(
-                painter = painterResource(R.drawable.tela_nuvens),
-                contentScale = ContentScale.Crop
-            )
+            .background(indigo_dye)
     ) {
         Column(
             modifier = Modifier
@@ -658,12 +642,12 @@ fun Second_Music(
 
                 Spacer(modifier = Modifier.width(16.dp)) // Espaço entre a imagem e o texto
                 Text(
-                    text = "TinyDreamer",
+                    text = "Lullaby",
                     style = TextStyle(
                         fontSize = 30.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = azul_confort,
-                        fontFamily = FontFamily.Cursive
+                        color = uranium_blue,
+                        fontFamily = FontFamily(Font(R.font.baloo))
                     )
                 )
             }
@@ -696,21 +680,21 @@ fun Second_Music(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "💓 Som de Batimentos Cardíacos 💓",
+                            text = "O som do coração 💙",
                             style = TextStyle(
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = marsala_confort,
-                                fontFamily = FontFamily.Cursive,
+                                color = uranium_blue,
+                                fontFamily = FontFamily(Font(R.font.baloo)),
                                 textAlign = TextAlign.Center
                             )
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
-                            text = "O som suave e rítmico dos batimentos cardíacos traz uma sensação de conforto e segurança, como nos primeiros dias de vida.",
+                            text = "O som suave e ritmado dos batimentos cardíacos evoca uma sensação de conforto e segurança, remetendo aos primeiros dias de vida.\n",
                             style = TextStyle(
                                 fontSize = 16.sp,
-                                color = Color.Black,
+                                color = uranium_blue,
                                 fontWeight = FontWeight.Normal,
                                 textAlign = TextAlign.Center
                             )
@@ -739,7 +723,7 @@ fun Second_Music(
                         text = if (isPlaying) "🎵 Reproduzindo Som 🎵" else "⏸️ Som Pausado ⏸️",
                         fontSize = 24.sp,
                         fontWeight = FontWeight.Bold,
-                        color = azul_confort,
+                        color = uranium_blue,
                         textAlign = TextAlign.Center
                     )
 
@@ -827,10 +811,7 @@ fun Third_Music(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .paint(
-                painter = painterResource(R.drawable.tela_nuvens),
-                contentScale = ContentScale.Crop
-            )
+            .background(indigo_dye)
     ) {
         Column(
             modifier = Modifier
@@ -852,12 +833,12 @@ fun Third_Music(
 
                 Spacer(modifier = Modifier.width(16.dp)) // Espaço entre a imagem e o texto
                 Text(
-                    text = "TinyDreamer",
+                    text = "Lullaby",
                     style = TextStyle(
                         fontSize = 30.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = azul_confort,
-                        fontFamily = FontFamily.Cursive
+                        color = uranium_blue,
+                        fontFamily = FontFamily(Font(R.font.baloo))
                     )
                 )
             }
@@ -890,12 +871,12 @@ fun Third_Music(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "☁️ Ruído Branco da Serenidade ☁️",
+                            text = "☁️ O som das nuvens ☁️",
                             style = TextStyle(
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = marsala_confort,
-                                fontFamily = FontFamily.Cursive,
+                                color = uranium_blue,
+                                fontFamily = FontFamily(Font(R.font.baloo)),
                                 textAlign = TextAlign.Center
                             )
                         )
@@ -904,7 +885,7 @@ fun Third_Music(
                             text = "Deixe o som suave e constante do ruído branco trazer calma, como um abraço de nuvem macia.",
                             style = TextStyle(
                                 fontSize = 16.sp,
-                                color = Color.Black,
+                                color = uranium_blue,
                                 fontWeight = FontWeight.Normal,
                                 textAlign = TextAlign.Center
                             )
@@ -933,7 +914,7 @@ fun Third_Music(
                         text = if (isPlaying) "🎶 Reproduzindo Som 🎶" else "⏸️ Som Pausado ⏸️",
                         fontSize = 24.sp,
                         fontWeight = FontWeight.Bold,
-                        color = azul_confort,
+                        color = uranium_blue,
                         textAlign = TextAlign.Center
                     )
 
